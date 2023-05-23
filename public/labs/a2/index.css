@@ -197,4 +197,13 @@
             width: 20%;
             float: left;
          }
-                                               
+         .btn-primary.override-bs {
+            background-color: yellow;
+            border-color: green;
+            border-width: 15px;
+            border-radius: 25px;
+            border-style: ridge;
+            font-size: 2em;
+            font-weight: normal;
+            }
+                                      
