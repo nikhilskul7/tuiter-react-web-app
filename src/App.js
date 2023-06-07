@@ -4,6 +4,7 @@ import Tuiter from "./tuiter";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
             <Route path="/"         element={<Navigate to="/labs"/>}/>
             <Route path="/labs/*"   element={<Labs/>}/>
             <Route path="/hello"    element={<HelloWorld/>}/>
+            
             <Route path="/tuiter/*" element={<Tuiter/>}/>
         </Routes>
       </div>
