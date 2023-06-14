@@ -1,6 +1,6 @@
 import axios from 'axios';
 const SERVER_API_URL = process.env.REACT_APP_SERVER_API_URL;
-const TUITS_API = `${SERVER_API_URL}/tuits`;
+const TUITS_API = `${SERVER_API_URL}/api/tuits`;
 export const createTuit = async (tuit) => {
     const response = await axios.post(TUITS_API, tuit)
     return response.data;
