@@ -9,21 +9,14 @@ export const loginThunk = createAsyncThunk(
  }
 );
 
+
 export const registerThunk = createAsyncThunk(
-  "user/registerUser",
-  async ({ firstName, lastName, username, password, handle, image }) => {
-      const userData = {
-          firstName,
-          lastName,
-          username,
-          password,
-          handle,
-          image,
-      };
-      console.log(firstName);
-      await authService.register(userData);
-      return userData;
-  }
+  "user/register", async (info) => {
+    console.log("wait")
+      const user = await authService.register(info);
+      console.log("done")
+      return user;
+    }
 );
 
 export const profileThunk = createAsyncThunk(

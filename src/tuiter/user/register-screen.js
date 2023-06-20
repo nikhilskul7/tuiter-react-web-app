@@ -14,13 +14,14 @@ function RegisterScreen() {
     const dispatch = useDispatch();
 
     const handleRegister = async () => {
+        //console.log("Correct");
         if (!firstName || !lastName || !username || !password || !handle || !image) {
             alert("Please fill  all fields.");
             return;
         }
         try {
             await dispatch(registerThunk({firstName, lastName, username, password, handle, image}));
-           
+            console.log("Correct");
             navigate("/tuiter/profile");
         } catch (e) {
             alert(e);
